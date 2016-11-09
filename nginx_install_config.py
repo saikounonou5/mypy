@@ -77,6 +77,7 @@ except ImportError:
      abspath = os.path.abspath(__file__)
      dname = os.path.dirname(abspath)
      os.chdir(dname)
+     print os.getcwd()
      os.system('sudo rpm -ivh pyparsing-*.rpm')
     
 from nginxparser import load,dump,dumps
