@@ -81,7 +81,7 @@ import pyparsing
 #Configure root and listener in nginx.config
 j= load(open('/etc/nginx/nginx.conf'))
 
-
+count=0
 #Loop down to server config vars
 for line in j:
      for l in line:
@@ -89,9 +89,10 @@ for line in j:
                for g in v:
                     for t in g:
                          if 'listen' in t:
-                              if t[1] != '8000 default_server':
+                              if t[1] != '8000 default_server' and count == 0:
                                    t[1]= '8000 default_server'
                                    print 'Listener port set to 8000'
+                                   count+=1
                               else:
                                    print 'Listener port already set to 8000'
                                    print t
