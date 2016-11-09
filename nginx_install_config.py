@@ -74,10 +74,7 @@ except ImportError:
      print 'pyparsing is not installed...'
      print 'Installing now...'
      print os.getcwd()
-     abspath = os.path.abspath(__file__)
-     dname = os.path.dirname(abspath)
-     os.chdir(dname)
-     print os.getcwd()
+     os.system('sudo wget ftp://ftp.rediris.es/volumes/sites/centos.org/7.2.1511/cloud/x86_64/openstack-liberty/common/pyparsing-2.0.3-1.el7.noarch.rpm')
      os.system('sudo rpm -ivh pyparsing-*.rpm')
     
 from nginxparser import load,dump,dumps
