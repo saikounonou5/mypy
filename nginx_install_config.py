@@ -37,6 +37,7 @@ if os.path.isdir('/exercise-webpage'):
      os.system('sudo git pull --ff-only upstream master')
      os.chdir(owd)
 else:
+     os.chdidr('/')
      os.system('sudo git clone https://github.com/saikounonou5/exercise-webpage')
      owd = os.getcwd()
      os.chdir('/exercise-webpage')
@@ -55,9 +56,10 @@ try:
      found = True
      print 'nginxparser is installed...'
 except ImportError:
-     found = false
+     found = False
      print 'nginxparser is not installed...'
      print 'Installing now...'
+     os.chdir('/')
      owd = os.getcwd()
      os.chdir('/nginxparser')
      os.chdir(owd)
@@ -70,7 +72,6 @@ except ImportError:
      found = False
      print 'pyparsing is not installed...'
      print 'Installing now...'
-     os.system('sudo wget ftp://ftp.muug.mb.ca/mirror/centos/7.2.1511/cloud/x86_64/openstack-liberty/common/pyparsing-2.0.3-1.el7.noarch.rpm')
      os.system('sudo rpm -ivh pyparsing-*.rpm')
     
 from nginxparser import load,dump,dumps
