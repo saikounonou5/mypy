@@ -112,5 +112,3 @@ os.system('sudo systemctl start nginx')
 #Call gitpage
 print ext_ip+':8000'
 os.system('sudo curl '+ext_ip +':8000')
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
