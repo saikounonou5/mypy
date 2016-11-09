@@ -38,10 +38,10 @@ if os.path.isdir('/exercise-webpage'):
      os.chdir(owd)
 else:
      os.chdir('/')
-     os.system('sudo git clone https://github.com/saikounonou5/exercise-webpage')
+     os.system('sudo git clone https://github.com/puppetlabs/exercise-webpage')
      owd = os.getcwd()
      os.chdir('/exercise-webpage')
-     os.system('sudo git remote add upstream https://github.com/saikounonou5/exercise-webpage.git')
+     os.system('sudo git remote add upstream https://github.com/puppetlabs/exercise-webpage.git')
      os.chdir(owd)
 
 print '\n############## NGINX PARSER ##############'
