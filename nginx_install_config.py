@@ -73,9 +73,11 @@ except ImportError:
      found = False
      print 'pyparsing is not installed...'
      print 'Installing now...'
-     print os.getcwd()
-     os.system('sudo wget ftp://ftp.rediris.es/volumes/sites/centos.org/7.2.1511/cloud/x86_64/openstack-liberty/common/pyparsing-2.0.3-1.el7.noarch.rpm')
+     owd = os.getcwd()
+     os.system('sudo git clone https://github.com/saikounonou5/pymods.git')
+     os.chdir('/pymods')
      os.system('sudo rpm -ivh pyparsing-*.rpm')
+     os.chdir(owd)
     
 from nginxparser import load,dump,dumps
 import pyparsing
