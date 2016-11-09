@@ -37,7 +37,7 @@ if os.path.isdir('/exercise-webpage'):
      os.system('sudo git pull --ff-only upstream master')
      os.chdir(owd)
 else:
-     os.chdidr('/')
+     os.chdir('/')
      os.system('sudo git clone https://github.com/saikounonou5/exercise-webpage')
      owd = os.getcwd()
      os.chdir('/exercise-webpage')
