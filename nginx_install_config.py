@@ -74,7 +74,10 @@ except ImportError:
      print 'pyparsing is not installed...'
      print 'Installing now...'
      print os.getcwd()
-     os.system('sudo rpm -ivh ./pyparsing-*.rpm')
+     abspath = os.path.abspath(__file__)
+     dname = os.path.dirname(abspath)
+     os.chdir(dname)
+     os.system('sudo rpm -ivh pyparsing-*.rpm')
     
 from nginxparser import load,dump,dumps
 import pyparsing
