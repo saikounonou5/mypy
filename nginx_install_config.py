@@ -93,12 +93,15 @@ for line in j:
                     for t in g:
                          if 'listen' in t:
                               if t[1] != '8000 default_server' and count == 0:
+                                   t[0]= 'listen'
                                    t[1]= '8000 default_server'
                                    print 'Listener port set to 8000'
                                    count+=1
                               else:
                                    print 'Listener port already set to 8000'
                                    print t
+                                   if count > 0:
+                                        t[0] = '#listen'
                          if 'root' in t:
                              print t
                              if t[1] !='/exercise-webpage':
