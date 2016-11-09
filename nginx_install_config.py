@@ -116,7 +116,7 @@ with open("/etc/nginx/nginx.conf",'w') as new_conf:
 os.system('setenforce permissive')
 
 #Get machine's external IP
-ext_ip = os.popen('ip addr show eth0').read().split("inet ")[1].split("/")[0]
+#ext_ip = os.popen('ip addr show eth0').read().split("inet ")[1].split("/")[0]
 
 print ext_ip + '\n'
 #Start Nginx
@@ -124,4 +124,4 @@ os.system('sudo systemctl start nginx')
 
 #Call gitpage
 print ext_ip+':8000'
-os.system('sudo curl '+ext_ip +':8000')
+os.system('sudo curl localhost:8000')
