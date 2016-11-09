@@ -21,6 +21,9 @@ if not is_installed('epel-release'):
 if not is_installed('nginx'):
      os.system('sudo yum -y install nginx')
 
+if not is_installed('wget'):
+     os.system('sudo yum -y install wget')
+
 print '\n################ GIT ######################'
 #Install git
 if not is_installed('git'):
