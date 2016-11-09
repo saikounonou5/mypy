@@ -62,6 +62,7 @@ except ImportError:
      os.chdir('/')
      owd = os.getcwd()
      os.chdir('/nginxparser')
+     os.system('sudo python setup.py install')
      os.chdir(owd)
 #Check if pyparsing installed
 try:
